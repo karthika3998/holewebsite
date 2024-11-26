@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        
+        .nav {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav li {
+            position: relative;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        .nav a:hover {
+            background-color: rgb(146, 146, 189);
+            border-radius: 5px;
+        }
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: lightgrey;
+            z-index: 1000;
+        }
+        .dropdown_menue ul {
+            display: block;
+            margin: 10;
+        }
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+        .dropdown_menue ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .dropdown_menue ul li a:hover {
+            background-color:red;
+            display: block;
+        }
+        
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+        .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        
+        .contact {
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: url('https://www.dubaigolf.com/media/pimpsacl/dsc_0244.jpg?anchor=center&mode=crop&width=1366&height=672&rnd=133216253386600000') no-repeat center/cover;
+            position: relative;
+        }
+
+        .contact::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-group label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .input-group input::placeholder {
+            color: #999;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: darkgray;
+        }
+
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            form {
+                padding: 15px;
+            }
+
+            .contact h1 {
+                font-size: 28px;
+            }
+
+            .contact p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/b5/75/91/b575911ec8a3da9715739d26698a9df6.jpg" alt="Company Logo">
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="rooms.html">rooms</a></li>
+                        <li><a href="test.html">services</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="text2.html">About Us</a></li>
+            <li><a href="page3.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <div class="contact-content">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Fill out the form below to get in touch.</p>
+            <div class="contact-box">
+                <form>
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="comment">Comment</label>
+                        <input type="text" id="comment" placeholder="Enter your comment">
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+    <script>
+      
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

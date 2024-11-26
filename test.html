@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .nav {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav li {
+            position: relative;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        .nav a:hover {
+            background-color: rgb(146, 146, 189);
+            border-radius: 5px;
+        }
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: lightgrey;
+            z-index: 1000;
+        }
+        .dropdown_menue ul {
+            display: block;
+            margin: 10;
+        }
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+        .dropdown_menue ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .dropdown_menue ul li a:hover {
+            background-color:red;
+            display: block;
+        }
+        
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+        .navigation .logo img {
+            height: 80px;
+            width: auto;
+        }
+        .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        .packages {
+            background-color: gainsboro;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .packages-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .package-box {
+            position: relative;
+            height: 300px;
+            width: 300px;
+            background-color: darkgrey;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, background-color 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .package-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            transition: transform 0.3s;
+        }
+
+        .package-box h2,
+        .package-box p {
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .package-box:hover {
+            transform: scale(1.05);
+        }
+
+        .package-box:hover img {
+            transform: scale(1.1);
+        }
+
+        
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/b5/75/91/b575911ec8a3da9715739d26698a9df6.jpg" alt="Company Logo">
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="rooms.html">rooms</a></li>
+                        <li><a href="test.html">services</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="text2.html">About Us</a></li>
+            <li><a href="page3.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="packages">Our Packages</section>
+        <div class="packages-container">
+            <div class="package-box">
+                <img src="https://i.pinimg.com/236x/23/ae/89/23ae89cdd1e95c8ed4bc016a0dd128f6.jpg" alt="Night Golf">
+                <h2>Night Golf</h2>
+                <p>9 holes of floodlit golf available until 9 PM weekdays.</p>
+            </div>
+            <div class="package-box">
+                <img src="https://static.wixstatic.com/media/83f667_5180ee3399534d62906bbd9fb33932f3~mv2.jpg" alt="Golf Academy">
+                <h2>Golf Academy</h2>
+                <p>1-on-1 private lessons by PGA professionals, 7 days a week.</p>
+            </div>
+            <div class="package-box">
+                <img src="https://static.wixstatic.com/media/83f667_bb3424a4754d48b7be06a9460f809ccc~mv2.jpg" alt="The Range">
+                <h2>The Range</h2>
+                <p>Driving range with bar vibes and TrackMan Technology.</p>
+            </div>
+        </div>
+
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

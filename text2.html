@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+
+        
+.nav {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav li {
+            position: relative;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        .nav a:hover {
+            background-color: rgb(146, 146, 189);
+            border-radius: 5px;
+        }
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: lightgrey;
+            z-index: 1000;
+        }
+        .dropdown_menue ul {
+            display: block;
+            margin: 10;
+        }
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+        .dropdown_menue ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .dropdown_menue ul li a:hover {
+            background-color:red;
+            display: block;
+        }
+        
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+         .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        .about {
+            background-color: beige;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+        .text {
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            width: 90%;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+
+            .navigation a {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            .text {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/b5/75/91/b575911ec8a3da9715739d26698a9df6.jpg" alt="Company Logo">
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="rooms.html">rooms</a></li>
+                        <li><a href="test.html">services</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="text2.html">About Us</a></li>
+            <li><a href="page3.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="about">About Us</div>
+
+    <div class="text">
+        The Whole Golf Resort is the epitome of luxury and leisure in the heart of Abu Dhabi. As the premier golf resort in the region, VOGO offers a harmonious blend of championship golf against the stunning Abu Dhabi skyline and opulent accommodations designed for unmatched comfort. Our centrally located hotel in Abu Dhabi provides easy access to key attractions, while our world-class spa, exquisite dining, and breathtaking views make VOGO the ultimate destination for golf enthusiasts and those seeking a tranquil escape. Book your stay today and experience the perfect fusion of indulgence and relaxation at VOGO Abu Dhabi Golf Resort & Spa.
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+
+
+    <script>
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
