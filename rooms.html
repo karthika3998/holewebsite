@@ -11,63 +11,82 @@
             background-color: black;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: center; /* Centers the content horizontally */
             position: relative;
         }
+
         .nav ul {
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
+            gap: 20px; /* Adds space between list items */
         }
+
         .nav li {
             position: relative;
         }
+
         .nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
             font-size: 1.2rem;
             padding: 10px 15px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, border-radius 0.3s ease;
         }
+
         .nav a:hover {
-            background-color: rgb(146, 146, 189);
+            background-color: #b4b5a7;
             border-radius: 5px;
         }
-        .dropdown_menue {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: lightgrey;
-            z-index: 1000;
-        }
-        .dropdown_menue ul {
-            display: block;
-            margin: 10;
-        }
-        .dropdown_menue ul li {
-            padding: 10px;
-            width: 400px;
-        }
-        .dropdown_menue ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-        .dropdown_menue ul li a:hover {
-            background-color:red;
-            display: block;
-        }
-        
-        .nav li:hover .dropdown_menue {
-            display: block;
+
+        .navigation .logo img {
+            height: 80px;
+            width: auto;
         }
         .logo img {
             height: 80px;
             width: auto;
         }
+
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(146, 146, 189);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .dropdown_menue ul {
+            margin: 0;
+            padding: 10px 0;
+            list-style: none;
+        }
+
+        .dropdown_menue ul li {
+            padding: 10px 20px;
+        }
+
+        .dropdown_menue ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .dropdown_menue ul li a:hover {
+            background-color: lightgrey;
+            border-radius: 5px;
+        }
+
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+
         .rom {
             background-color: lightblue;
             text-align: center;
@@ -167,6 +186,7 @@
             <li><a href="page3.html">Contact Us</a></li>
         </ul>
     </div>
+
     
     <section class="rom">Special Room Offerings</section>
     <div class="rooms">
@@ -211,7 +231,7 @@
             
         </div>
 
-    </div>
+        </div>
 
     <footer>
         <p>&copy; <span id="year"></span> All rights reserved.</p>
