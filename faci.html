@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .nav {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+    }
+    .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+    }
+     .nav li {
+            position: relative;
+    }
+    .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+    }
+    .nav a:hover {
+            background-color: #b4b5a7;
+            border-radius: 5px;
+    
+    }
+    .logo{
+        height:80px;
+        width:auto;
+    }
+    .logo img {
+            height: 100%;
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+
+    .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(146, 146, 189);
+            z-index: 1000;
+        }
+        .dropdown_menue ul {
+            display: block;
+            margin: 10;
+        }
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+        .dropdown_menue ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .dropdown_menue ul li a:hover {
+            background-color:lightgrey;
+            display: block;
+        }
+        
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+        .rom {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 30px 0;
+        }
+
+    .rooms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        background-color: antiquewhite;
+    }
+
+    .room-box {
+        height: 250px;
+        width: 300px;
+        background-color: lightgrey;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 2px solid #333;
+        transition: transform 0.3s ease, border-color 0.3s;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .room-box img {
+        height: 60%;
+        width: 100%;
+        object-fit: cover;
+        border-bottom: 2px solid #333;
+    }
+
+    .room-box p {
+        font-size: 14px;
+        color: #333;
+        padding: 10px;
+        background-color: white;
+        border-radius: 5px;
+    }
+
+    .room-box:hover {
+        transform: scale(1.05);
+        border-color: #000;
+    }
+
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .packages-container,
+            .rooms {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .package-box,
+            .rooms div {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+</style>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="https://i.pinimg.com/736x/b5/75/91/b575911ec8a3da9715739d26698a9df6.jpg" alt="Company Logo">
+        </div>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="rooms.html">rooms</a></li>
+                        <li><a href="test.html">services</a></li>
+                        <li><a href="faci.html">Facilities</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="text2.html">About Us</a></li>
+            <li><a href="page3.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <section class="rom">Special Room Offerings</section>
+    <div class="rooms">
+        <div class="room-box">
+            <img src="https://i.pinimg.com/474x/ef/ee/50/efee50d3c5e807bafc2af042ea3e3512.jpg" alt="Room 1">
+            <p>Three championship golf courses including the famous Sea View course</p>
+        </div>
+        <div class="room-box">
+            <img src="https://i.pinimg.com/736x/54/1a/5f/541a5f2677643016b93cd8ec841686dd.jpg" alt="Room 2">
+            <p>Two clubhouses</p>
+        </div>
+        <div class="room-box">
+            <img src="https://i.pinimg.com/474x/2e/17/2e/2e172ef5256ee425c1a3d940a33a6ada.jpg" alt="Room 3">
+            <p>Hotel accommodation</p>
+        </div>
+        <div class="room-box">
+            <img src="https://i.pinimg.com/474x/e4/cb/cc/e4cbcccd3cc76ab68adc68f3f592765f.jpg" alt="Room 4">
+            <p>Restaurants and café</p>
+        </div>
+        <div class="room-box">
+            <img src="https://i.pinimg.com/236x/21/49/ab/2149aba3bb352136d5a951eb12dfac4c.jpg" alt="Room 5">
+            <p>Pro shop</p>
+        </div>
+    </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
