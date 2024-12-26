@@ -4,47 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        
         .nav {
             height: 80px;
             background-color: black;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space between logo and menu */
-            position: relative;
-            padding: 0 20px; /* Add padding for spacing */
+            justify-content: space-between;
+            padding: 0 20px;
         }
 
         .logo {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    }
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-    .logo img {
-        height: 100%;
-        max-height: 80px;
-        width: auto;
-        object-fit: contain;
-    }
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
 
-    .logo h2 {
-        color: white;
-        font-size: 1.5rem;
-        margin: 0;
-        white-space: nowrap; 
-    }
-
+        .logo h2 {
+            color: white;
+            font-size: 1.5rem;
+        }
 
         .nav ul {
             list-style: none;
@@ -53,17 +43,12 @@
             padding: 0;
         }
 
-        .nav li {
-            position: relative;
-        }
-
         .nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2rem;
             padding: 10px 15px;
-            transition: background-color 0.3s ease;
         }
 
         .nav a:hover {
@@ -71,7 +56,6 @@
             border-radius: 5px;
         }
 
-        
         .dropdown_menue {
             display: none;
             position: absolute;
@@ -81,53 +65,52 @@
             z-index: 1000;
         }
 
-        .dropdown_menue ul {
+        .nav li:hover .dropdown_menue {
             display: block;
-            margin: 0;
+        }
+
+        .dropdown_menue ul {
             padding: 0;
         }
 
         .dropdown_menue ul li {
             padding: 10px;
-            width: 400px;
         }
 
-        .dropdown_menue ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        .dropdown_menue ul li a:hover {
-            background-color: red;
-            display: block;
-        }
-
-        .nav li:hover .dropdown_menue {
-            display: block;
-        }
-
-        .rom {
-            background-color: lightblue;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            margin: 30px 0;
-        }
-
-        .rooms {
+        .content-wrapper {
             display: flex;
             flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        .content h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .image-gallery {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
-            justify-content: center;
             padding: 20px;
             background-color: antiquewhite;
         }
+
         .room-box {
-            height: 500px;
-            width: 350px;
+            width: 100%;
+            height: 250px;
             background-color: lightgrey;
             display: flex;
             flex-direction: column;
@@ -136,27 +119,23 @@
             border-radius: 8px;
             overflow: hidden;
             border: 2px solid #333;
-            transition: transform 0.3s ease, border-color 0.3s;
             text-align: center;
             padding: 10px;
         }
+
         .room-box img {
             height: 60%;
             width: 100%;
             object-fit: cover;
             border-bottom: 2px solid #333;
         }
+
         .room-box ul {
             text-align: left;
             padding: 0;
             list-style: disc;
             margin: 0 15px;
         }
-        .room-box:hover {
-            transform: scale(1.05);
-            border-color: #000;
-        }
-
 
         footer {
             background-color: #333;
@@ -167,24 +146,16 @@
         }
 
         @media (max-width: 768px) {
-            .navigation {
+            .content-wrapper {
                 flex-direction: column;
-                align-items: center;
             }
 
-            .packages-container,
-            .rooms {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .package-box,
-            .rooms div {
+            .content, .image-gallery {
                 width: 100%;
-                max-width: 300px;
             }
         }
-</style>
+    </style>
+</head>
 <body>
     <div class="nav">
         <div class="logo">
@@ -208,51 +179,46 @@
         </ul>
     </div>
 
-    
     <section class="rom">Special Room Offerings</section>
-    <div class="rooms">
-        <div class="room-box">
-            <img src="https://static.wixstatic.com/media/83f667_d8ef491520994f05bed94c5e714b6319~mv2.jpg/v1/crop/x_18,y_0,w_5785,h_3880/fill/w_516,h_346,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Deluxe%20Twin%20Stone%20Balcony%20Vogo%20Abu%20Dhabi%20Golf%20Resort%20%26%20Spa.jpg" alt="Room 1">
-            <h2>Five rounds</h2>
-            
-            <ul>
-                <li>Five night full board stay in a luxury suite</li>
-                <li>Five 18 hole rounds</li>
-                <li>one guaranteed round on the famous Sea View course</li>
-                <li>complimentary digital coaching session.</li>
-            </ul>
-            
+    <div class="content-wrapper">
+        <div class="content">
+            <h2>Exclusive Offers</h2>
+            <p>Enjoy luxurious accommodations, world-class facilities, and breathtaking views. Our tailored packages are perfect for golf enthusiasts, corporate retreats, and relaxing getaways.</p>
+            <p>Each package is designed to provide an exceptional experience with exclusive benefits.</p>
         </div>
-        <div class="room-box">
-            <img src="https://static.wixstatic.com/media/83f667_ce7df8b43837409b9adfde42de67e2d0~mv2.jpg/v1/crop/x_18,y_0,w_5939,h_3983/fill/w_516,h_346,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Premium%20King%20Full%20Golf%20Course%20View%20Vogo%20Abu%20Dhabi%20Golf%20Resort%20%26%20Spa%202.jpg" alt="Room 2">
-            <h2>Triple tee</h2>
-            
-             <ul>
-                <li>two night stay in a double room with breakfast.</li>
-                <li>three 18 hole rounds including one on the famous Sea View course(if available).</li>
-                <li>complimentary buggy hire.</li>
-                <li>20% discount for the pro shop.</li>
-            </ul>
-            
-            
-            
+        <div class="image-gallery">
+            <div class="room-box">
+                <img src="https://static.wixstatic.com/media/83f667_d8ef491520994f05bed94c5e714b6319~mv2.jpg" alt="Room 1">
+                <h3>Five Rounds</h3>
+                <ul>
+                    <li>Luxury suite stay</li>
+                    <li>Five 18-hole rounds</li>
+                    <li>Sea View course</li>
+                    <li>Digital coaching session</li>
+                </ul>
+            </div>
+            <div class="room-box">
+                <img src="https://static.wixstatic.com/media/83f667_ce7df8b43837409b9adfde42de67e2d0~mv2.jpg" alt="Room 2">
+                <h3>Triple Tee</h3>
+                <ul>
+                    <li>Double room stay</li>
+                    <li>Three 18-hole rounds</li>
+                    <li>Buggy hire</li>
+                    <li>Pro shop discount</li>
+                </ul>
+            </div>
+            <div class="room-box">
+                <img src="https://static.wixstatic.com/media/83f667_29eebddb789d4c0494bc15f5268b32c4~mv2.jpg" alt="Room 3">
+                <h3>Getaway Break</h3>
+                <ul>
+                    <li>Overnight stay</li>
+                    <li>Restaurant dinner</li>
+                    <li>Course access</li>
+                    <li>Club hire</li>
+                </ul>
+            </div>
         </div>
-        <div class="room-box">
-            <img src="https://static.wixstatic.com/media/83f667_29eebddb789d4c0494bc15f5268b32c4~mv2.jpg/v1/crop/x_18,y_0,w_5922,h_3972/fill/w_516,h_346,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Premium%20King%20Full%20Golf%20Course%20View%20Vogo%20Abu%20Dhabi%20Golf%20Resort%20%26%20Spa%203.jpg" alt="Room 3">
-            <h2>Getaway break</h2>
-            
-            <ul>
-                <li>overnight stay with full breakfast.</li>
-                <li>dinner in any of the resort’s restaurants.</li>
-                <li>access to courses (charges will apply and excludes the Sea View course).</li>
-                <li>complimentary club hire.</li>
-                <li>Custom packages are available for corporate events and longer stays.</li>
-                <li>Clients must contact the company to arrange any custom packages.</li>
-            </ul>
-            
-        </div>
-
-        </div>
+    </div>
 
     <footer>
         <p>&copy; <span id="year"></span> All rights reserved.</p>
