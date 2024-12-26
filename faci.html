@@ -4,47 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<style>
-    body {
+    <style>
+        body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
 
-        
+        /* Navigation Bar */
         .nav {
             height: 80px;
             background-color: black;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space between logo and menu */
+            justify-content: space-between; 
             position: relative;
-            padding: 0 20px; /* Add padding for spacing */
+            padding: 0 20px; 
         }
 
         .logo {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    }
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px; 
+        }
 
-    .logo img {
-        height: 100%;
-        max-height: 80px;
-        width: auto;
-        object-fit: contain;
-    }
+        .logo img {
+            height: 100%;
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
 
-    .logo h2 {
-        color: white;
-        font-size: 1.5rem;
-        margin: 0;
-        white-space: nowrap; 
-    }
-
+        .logo h2 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0;
+            white-space: nowrap; 
+        }
 
         .nav ul {
             list-style: none;
@@ -71,7 +69,7 @@
             border-radius: 5px;
         }
 
-        
+        /* Dropdown Menu */
         .dropdown_menue {
             display: none;
             position: absolute;
@@ -106,12 +104,8 @@
         .nav li:hover .dropdown_menue {
             display: block;
         }
-        .logo img {
-            height: 80px;
-            width: auto;
-        }
-    
-    .rom {
+
+        .rom {
             background-color: lightblue;
             text-align: center;
             padding: 20px;
@@ -119,86 +113,88 @@
             font-weight: bold;
             color: #333;
             margin: 30px 0;
-    }
-
-    .rooms {
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; 
-        justify-content: center; 
-        padding: 20px;
-        background-color: antiquewhite;
-        min-height: 100vh; 
-    }
-
-    .room-box {
-        height: 250px;
-        width: 300px;
-        background-color: lightgrey;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        border-radius: 8px;
-        overflow: hidden;
-        border: 2px solid #333;
-        transition: transform 0.3s ease, border-color 0.3s;
-        text-align: center;
-        padding: 10px;
-        margin-bottom: 20px; 
-    }
-
-    .room-box img {
-        height: 60%;
-        width: 100%;
-        object-fit: cover;
-        border-bottom: 2px solid #333;
-    }
-
-    .room-box p {
-        font-size: 14px;
-        color: #333;
-        padding: 10px;
-        background-color: white;
-        border-radius: 5px;
-    }
-
-    .room-box:hover {
-        transform: scale(1.05);
-        border-color: #000;
-    }
-
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    @media (max-width: 768px) {
-        .navigation {
-            flex-direction: column;
-            align-items: center;
         }
 
-        .packages-container,
         .rooms {
-            flex-direction: column;
+            display: flex; 
+            flex-direction: column; 
             align-items: center;
+            justify-content: center; 
+            padding: 20px;
+            background-color: antiquewhite;
+            min-height: 100vh;
         }
 
-        .package-box,
-        .rooms div {
-            width: 100%;
-            max-width: 300px;
+        .room-box {
+            height: 350px; /* Increase height to allow for larger images */
+            width: 350px; /* Increase width of the room box */
+            background-color: lightgrey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px; 
         }
-    }
-</style>
+
+        .room-box img {
+            height: 70%;
+            width: 100%; 
+            object-fit: cover;
+            border-bottom: 2px solid #333;
+        }
+
+        .room-box p {
+            font-size: 14px;
+            color: #333;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .room-box:hover {
+            transform: scale(1.05);
+            border-color: #000;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .packages-container,
+            .rooms {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .package-box,
+            .rooms div {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="nav">
         <div class="logo">
             <img src="https://i.pinimg.com/736x/b5/75/91/b575911ec8a3da9715739d26698a9df6.jpg" alt="Company Logo">
+            <h2>Hole Golf Resort</h2>
         </div>
         <ul>
             <li><a href="Index.html">Home</a></li>
@@ -216,7 +212,9 @@
             <li><a href="page3.html">Contact Us</a></li>
         </ul>
     </div>
+
     <section class="rom">Special Room Offerings</section>
+    
     <div class="rooms">
         <div class="room-box">
             <img src="https://i.pinimg.com/474x/ef/ee/50/efee50d3c5e807bafc2af042ea3e3512.jpg" alt="Room 1">
