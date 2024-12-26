@@ -6,107 +6,77 @@
     <title>Document</title>
 </head>
 <style>
-    body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        
-        .nav {
+    .nav {
             height: 80px;
             background-color: black;
             display: flex;
             align-items: center;
-            justify-content: space-between; /* Space between logo and menu */
+            justify-content: center;
             position: relative;
-            padding: 0 20px; /* Add padding for spacing */
-        }
-
-        .logo {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
     }
-
-    .logo img {
-        height: 100%;
-        max-height: 80px;
-        width: auto;
-        object-fit: contain;
-    }
-
-    .logo h2 {
-        color: white;
-        font-size: 1.5rem;
-        margin: 0;
-        white-space: nowrap; 
-    }
-
-
-        .nav ul {
+    .nav ul {
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
-        }
-
-        .nav li {
+    }
+     .nav li {
             position: relative;
-        }
-
-        .nav a {
+    }
+    .nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2rem;
             padding: 10px 15px;
             transition: background-color 0.3s ease;
-        }
-
-        .nav a:hover {
-            background-color: rgb(146, 146, 189);
+    }
+    .nav a:hover {
+            background-color: #b4b5a7;
             border-radius: 5px;
-        }
+    }
+    .logo {
+        height: 80px;
+        width: auto;
+    }
+    .logo img {
+            height: 100%;
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+    }
 
-        
-        .dropdown_menue {
+    .dropdown_menue {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: lightgrey;
+            background-color: rgb(146, 146, 189);
             z-index: 1000;
-        }
-
-        .dropdown_menue ul {
+    }
+    .dropdown_menue ul {
             display: block;
-            margin: 0;
-            padding: 0;
-        }
-
-        .dropdown_menue ul li {
+            margin: 10;
+    }
+    .dropdown_menue ul li {
             padding: 10px;
             width: 400px;
-        }
-
-        .dropdown_menue ul li a {
+    }
+    .dropdown_menue ul li a {
             color: white;
             text-decoration: none;
             font-size: 1rem;
-        }
-
-        .dropdown_menue ul li a:hover {
-            background-color: red;
+    }
+    .dropdown_menue ul li a:hover {
+            background-color: lightgrey;
             display: block;
-        }
+    }
 
-        .nav li:hover .dropdown_menue {
+    .nav li:hover .dropdown_menue {
             display: block;
-        }
-        .rom {
+    }
+    
+    .rom {
             background-color: lightblue;
             text-align: center;
             padding: 20px;
@@ -114,15 +84,16 @@
             font-weight: bold;
             color: #333;
             margin: 30px 0;
-        }
+    }
 
     .rooms {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
         padding: 20px;
         background-color: antiquewhite;
+        min-height: 100vh; 
     }
 
     .room-box {
@@ -139,6 +110,7 @@
         transition: transform 0.3s ease, border-color 0.3s;
         text-align: center;
         padding: 10px;
+        margin-bottom: 20px; 
     }
 
     .room-box img {
@@ -161,51 +133,47 @@
         border-color: #000;
     }
 
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+    }
 
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
+    @media (max-width: 768px) {
+        .navigation {
+            flex-direction: column;
+            align-items: center;
         }
 
-        @media (max-width: 768px) {
-            .navigation {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .packages-container,
-            .rooms {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .package-box,
-            .rooms div {
-                width: 100%;
-                max-width: 300px;
-            }
+        .packages-container,
+        .rooms {
+            flex-direction: column;
+            align-items: center;
         }
+
+        .package-box,
+        .rooms div {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
 </style>
 <body>
     <div class="nav">
         <div class="logo">
             <img src="https://i.pinimg.com/736x/b5/75/91/b575911ec8a3da9715739d26698a9df6.jpg" alt="Company Logo">
-            <h2>Hole Gulf Resort</h2>
         </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="Index.html">Home</a></li>
             <li>
                 <a href="#">Services</a>
                 <div class="dropdown_menue">
                     <ul>
-                        <li><a href="rooms.html">rooms</a></li>
-                        <li><a href="test.html">services</a></li>
-                        <li><a href="faci.html">Facilities</a>
-                        </li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="test.html">Services</a></li>
+                        <li><a href="faci.html">Facilities</a></li>
                     </ul>
                 </div>
             </li>
@@ -236,8 +204,6 @@
             <p>Pro shop</p>
         </div>
     </div>
-
-    </main>
 
     <footer>
         <p>&copy; <span id="year"></span> All rights reserved.</p>
