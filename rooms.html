@@ -17,23 +17,30 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
             padding: 0 20px;
         }
 
         .logo {
+            height: 80px;
             display: flex;
             align-items: center;
+            justify-content: flex-start;
             gap: 10px;
         }
 
         .logo img {
-            height: 60px;
+            height: 100%;
+            max-height: 80px;
             width: auto;
+            object-fit: contain;
         }
 
         .logo h2 {
             color: white;
             font-size: 1.5rem;
+            margin: 0;
+            white-space: nowrap; 
         }
 
         .nav ul {
@@ -43,12 +50,17 @@
             padding: 0;
         }
 
+        .nav li {
+            position: relative;
+        }
+
         .nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.2rem;
             padding: 10px 15px;
+            transition: background-color 0.3s ease;
         }
 
         .nav a:hover {
@@ -56,51 +68,17 @@
             border-radius: 5px;
         }
 
-        .dropdown_menue {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: lightgrey;
-            z-index: 1000;
-        }
-
-        .nav li:hover .dropdown_menue {
-            display: block;
-        }
-
-        .dropdown_menue ul {
-            padding: 0;
-        }
-
-        .dropdown_menue ul li {
-            padding: 10px;
-        }
-
-        .content-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 20px;
-        }
-
-        .content {
-            flex: 1;
-            padding: 20px;
+        .rom {
             background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 30px 0;
         }
 
-        .content h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .content p {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-
-        .image-gallery {
-            flex: 1;
+        .rooms {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -109,32 +87,41 @@
         }
 
         .room-box {
-            width: 100%;
-            height: 250px;
-            background-color: lightgrey;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            gap: 20px;
+            background-color: lightgrey;
+            border: 2px solid #333;
             border-radius: 8px;
             overflow: hidden;
-            border: 2px solid #333;
-            text-align: center;
             padding: 10px;
+            transition: transform 0.3s ease, border-color 0.3s;
         }
 
         .room-box img {
-            height: 60%;
-            width: 100%;
+            height: 200px;
+            width: 300px;
             object-fit: cover;
-            border-bottom: 2px solid #333;
+            border-right: 2px solid #333;
+        }
+
+        .room-box .room-content {
+            flex: 1;
+        }
+
+        .room-box h2 {
+            margin: 0 0 10px;
         }
 
         .room-box ul {
-            text-align: left;
-            padding: 0;
+            margin: 0;
+            padding-left: 20px;
             list-style: disc;
-            margin: 0 15px;
+        }
+
+        .room-box:hover {
+            transform: scale(1.05);
+            border-color: #000;
         }
 
         footer {
@@ -143,16 +130,6 @@
             text-align: center;
             padding: 20px;
             font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-            }
-
-            .content, .image-gallery {
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -164,57 +141,47 @@
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li>
-                <a href="#">Services</a>
-                <div class="dropdown_menue">
-                    <ul>
-                        <li><a href="rooms.html">Rooms</a></li>
-                        <li><a href="test.html">Services</a></li>
-                        <li><a href="faci.html">Facilities</a></li>
-                    </ul>
-                </div>
-            </li>
+            <li><a href="#">Services</a></li>
             <li><a href="text2.html">About Us</a></li>
             <li><a href="page3.html">Contact Us</a></li>
         </ul>
     </div>
 
     <section class="rom">Special Room Offerings</section>
-    <div class="content-wrapper">
-        <div class="content">
-            <h2>Exclusive Offers</h2>
-            <p>Enjoy luxurious accommodations, world-class facilities, and breathtaking views. Our tailored packages are perfect for golf enthusiasts, corporate retreats, and relaxing getaways.</p>
-            <p>Each package is designed to provide an exceptional experience with exclusive benefits.</p>
+    <div class="rooms">
+        <div class="room-box">
+            <img src="https://static.wixstatic.com/media/83f667_d8ef491520994f05bed94c5e714b6319~mv2.jpg" alt="Room 1">
+            <div class="room-content">
+                <h2>Five rounds</h2>
+                <ul>
+                    <li>Five night full board stay in a luxury suite</li>
+                    <li>Five 18 hole rounds</li>
+                    <li>One guaranteed round on the famous Sea View course</li>
+                    <li>Complimentary digital coaching session</li>
+                </ul>
+            </div>
         </div>
-        <div class="image-gallery">
-            <div class="room-box">
-                <img src="https://static.wixstatic.com/media/83f667_d8ef491520994f05bed94c5e714b6319~mv2.jpg" alt="Room 1">
-                <h3>Five Rounds</h3>
+        <div class="room-box">
+            <img src="https://static.wixstatic.com/media/83f667_ce7df8b43837409b9adfde42de67e2d0~mv2.jpg" alt="Room 2">
+            <div class="room-content">
+                <h2>Triple tee</h2>
                 <ul>
-                    <li>Luxury suite stay</li>
-                    <li>Five 18-hole rounds</li>
-                    <li>Sea View course</li>
-                    <li>Digital coaching session</li>
+                    <li>Two night stay in a double room with breakfast</li>
+                    <li>Three 18 hole rounds</li>
+                    <li>Complimentary buggy hire</li>
+                    <li>20% discount for the pro shop</li>
                 </ul>
             </div>
-            <div class="room-box">
-                <img src="https://static.wixstatic.com/media/83f667_ce7df8b43837409b9adfde42de67e2d0~mv2.jpg" alt="Room 2">
-                <h3>Triple Tee</h3>
+        </div>
+        <div class="room-box">
+            <img src="https://static.wixstatic.com/media/83f667_29eebddb789d4c0494bc15f5268b32c4~mv2.jpg" alt="Room 3">
+            <div class="room-content">
+                <h2>Getaway break</h2>
                 <ul>
-                    <li>Double room stay</li>
-                    <li>Three 18-hole rounds</li>
-                    <li>Buggy hire</li>
-                    <li>Pro shop discount</li>
-                </ul>
-            </div>
-            <div class="room-box">
-                <img src="https://static.wixstatic.com/media/83f667_29eebddb789d4c0494bc15f5268b32c4~mv2.jpg" alt="Room 3">
-                <h3>Getaway Break</h3>
-                <ul>
-                    <li>Overnight stay</li>
-                    <li>Restaurant dinner</li>
-                    <li>Course access</li>
-                    <li>Club hire</li>
+                    <li>Overnight stay with full breakfast</li>
+                    <li>Dinner in any of the resort’s restaurants</li>
+                    <li>Access to courses (charges apply)</li>
+                    <li>Complimentary club hire</li>
                 </ul>
             </div>
         </div>
@@ -223,7 +190,6 @@
     <footer>
         <p>&copy; <span id="year"></span> All rights reserved.</p>
     </footer>
-
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
