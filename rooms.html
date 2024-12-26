@@ -6,21 +6,51 @@
     <title>Document</title>
 </head>
 <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
         .nav {
             height: 80px;
             background-color: black;
             display: flex;
             align-items: center;
-            justify-content: center; /* Centers the content horizontally */
+            justify-content: space-between; /* Space between logo and menu */
             position: relative;
+            padding: 0 20px; /* Add padding for spacing */
         }
+
+        .logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    }
+
+    .logo img {
+        height: 100%;
+        max-height: 80px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .logo h2 {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0;
+        white-space: nowrap; 
+    }
+
 
         .nav ul {
             list-style: none;
             display: flex;
             margin: 0;
             padding: 0;
-            gap: 20px; /* Adds space between list items */
         }
 
         .nav li {
@@ -30,57 +60,47 @@
         .nav a {
             color: white;
             text-decoration: none;
+            margin: 0 15px;
             font-size: 1.2rem;
             padding: 10px 15px;
-            transition: background-color 0.3s ease, border-radius 0.3s ease;
+            transition: background-color 0.3s ease;
         }
 
         .nav a:hover {
-            background-color: #b4b5a7;
+            background-color: rgb(146, 146, 189);
             border-radius: 5px;
         }
 
-        .navigation .logo img {
-            height: 80px;
-            width: auto;
-        }
-        .logo img {
-            height: 80px;
-            width: auto;
-        }
-
+        
         .dropdown_menue {
             display: none;
             position: absolute;
             top: 100%;
             left: 0;
-            background-color: rgb(146, 146, 189);
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: lightgrey;
             z-index: 1000;
         }
 
         .dropdown_menue ul {
+            display: block;
             margin: 0;
-            padding: 10px 0;
-            list-style: none;
+            padding: 0;
         }
 
         .dropdown_menue ul li {
-            padding: 10px 20px;
+            padding: 10px;
+            width: 400px;
         }
 
         .dropdown_menue ul li a {
             color: white;
             text-decoration: none;
             font-size: 1rem;
-            display: block;
-            padding: 5px 0;
         }
 
         .dropdown_menue ul li a:hover {
-            background-color: lightgrey;
-            border-radius: 5px;
+            background-color: red;
+            display: block;
         }
 
         .nav li:hover .dropdown_menue {
@@ -169,6 +189,7 @@
     <div class="nav">
         <div class="logo">
             <img src="https://i.pinimg.com/736x/b5/75/91/b575911ec8a3da9715739d26698a9df6.jpg" alt="Company Logo">
+            <h2>Hole Gulf Resort</h2>
         </div>
         <ul>
             <li><a href="index.html">Home</a></li>
