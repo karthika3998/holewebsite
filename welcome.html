@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav-1 {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 20px; 
+        }
+
+        .logo h2 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .nav-1 .login {
+            margin-left: auto; 
+        }
+
+        .nav-1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-1 a:hover {
+            background-color: gray;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: beige;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: antiquewhite;
+            border-radius: 5px;
+        }
+
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .dropdown_menue ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+
+        .dropdown_menue ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .dropdown_menue ul li a:hover {
+            display: block;
+        }
+
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+
+        .Picture {
+            height: 400px;
+            background-color: gainsboro;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .Picture img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            background-color: blanchedalmond;
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .golf {
+            background-color: beige;
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+        }
+
+        .golf-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .golf-item {
+            background-color: bisque;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .golf-item img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .golf-item h2 {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .golf-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .Picture {
+                height: 300px;
+            }
+
+            .Picture img {
+                width: 100%;
+            }
+
+            .text {
+                font-size: 18px;
+            }
+
+            .golf-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-1">
+        <div class="logo">
+            <h2>Hole Gulf Resort</h2>
+        </div>
+        <div class="login">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="welcome.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="room.html">Rooms</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="fac.html">Facilities</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="Picture">
+        <img src="https://static.wixstatic.com/media/83f667_b0e561d7b8f54a7da7d11636cfcbd0ff~mv2.jpg/v1/fill/w_2140,h_620,fp_0.5_0.65,q_70/83f667_b0e561d7b8f54a7da7d11636cfcbd0ff~mv2.webp" alt="Golf Hero Banner">
+    </div>
+
+    <section class="text">
+        <p>Discover the best golfing experiences and premium facilities tailored for your ultimate enjoyment.</p>
+    </section>
+
+    <section class="golf">
+        Explore Our Golf Services
+    </section>
+
+    <div class="golf-container">
+        <div class="golf-item">
+            <img src="https://static.wixstatic.com/media/83f667_5646e1f2cb5243a6b047012ee1ca3595~mv2.jpg" alt="Golf Experiences">
+            <h2>Golf Experiences</h2>
+            <p>18 Hole Championship Golf Course, Night Golf, TrackMan Range & Practice Facilities</p>
+        </div>
+        <div class="golf-item">
+            <img src="https://static.wixstatic.com/media/11062b_b9f60de48c6644a7aa91b8968246a450~mv2.jpg" alt="Spa Treatment">
+            <h2>Relax at The HOLE Resort</h2>
+            <p>Relax and rejuvenate at The Spa by The HOLE resort</p>
+        </div>
+        <div class="golf-item">
+            <img src="https://static.wixstatic.com/media/83f667_3d45984af5ae4ad49524ab212ce0ccd4~mv2.jpg" alt="Host Your Event">
+            <h2>Host Your Event</h2>
+            <p>10 Distinct Venue Options, with on-site catering team</p>
+        </div>
+        <div class="golf-item">
+            <img src="https://static.wixstatic.com/media/83f667_a96cd819e9594cf491a4271aced79b92~mv2.jpg" alt="Vibrant Venues">
+            <h2>Vibrant Venues</h2>
+            <p>With 10 Distinct Venue Spaces, our Resort offers ample space to host just about any event.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

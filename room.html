@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .nav-1 {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 20px; 
+        }
+
+        .logo h2 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .nav-1 .login {
+            margin-left: auto; 
+        }
+
+        .nav-1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-1 a:hover {
+            background-color: gray;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: beige;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: antiquewhite;
+            border-radius: 5px;
+        }
+
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .dropdown_menue ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+
+        .dropdown_menue ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .dropdown_menue ul li a:hover {
+            display: block;
+        }
+
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+
+        .rom {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 30px 0;
+        }
+
+        .rooms {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            background-color: antiquewhite;
+        }
+
+        .room-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background-color: lightgrey;
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 10px;
+            transition: transform 0.3s ease, border-color 0.3s;
+        }
+
+        .room-box img {
+            height: 200px;
+            width: 300px;
+            object-fit: cover;
+            border-right: 2px solid #333;
+        }
+
+        .room-box .room-content {
+            flex: 1;
+        }
+
+        .room-box h2 {
+            margin: 0 0 10px;
+        }
+
+        .room-box ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style: disc;
+        }
+
+        .room-box:hover {
+            transform: scale(1.05);
+            border-color: #000;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-1">
+        <div class="logo">
+            <h2>Hole Gulf Resort</h2>
+        </div>
+        <div class="login">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="welcome.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="room.html">Rooms</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="fac.html">Facilities</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <section class="rom">Special Room Offerings</section>
+    <div class="picturee"><img src="https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg"></div>
+    <div class="rooms">
+        <div class="room-box">
+            <img src="https://static.wixstatic.com/media/83f667_d8ef491520994f05bed94c5e714b6319~mv2.jpg" alt="Room 1">
+            <div class="room-content">
+                <h2>Five rounds</h2>
+                <ul>
+                    <li>Five night full board stay in a luxury suite</li>
+                    <li>Five 18 hole rounds</li>
+                    <li>One guaranteed round on the famous Sea View course</li>
+                    <li>Complimentary digital coaching session</li>
+                </ul>
+            </div>
+        </div>
+        <div class="room-box">
+            <img src="https://static.wixstatic.com/media/83f667_ce7df8b43837409b9adfde42de67e2d0~mv2.jpg" alt="Room 2">
+            <div class="room-content">
+                <h2>Triple tee</h2>
+                <ul>
+                    <li>Two night stay in a double room with breakfast</li>
+                    <li>Three 18 hole rounds</li>
+                    <li>Complimentary buggy hire</li>
+                    <li>20% discount for the pro shop</li>
+                </ul>
+            </div>
+        </div>
+        <div class="room-box">
+            <img src="https://static.wixstatic.com/media/83f667_29eebddb789d4c0494bc15f5268b32c4~mv2.jpg" alt="Room 3">
+            <div class="room-content">
+                <h2>Getaway break</h2>
+                <ul>
+                    <li>Overnight stay with full breakfast</li>
+                    <li>Dinner in any of the resort’s restaurants</li>
+                    <li>Access to courses (charges apply)</li>
+                    <li>Complimentary club hire</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .nav-1 {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 20px; 
+        }
+
+        .logo h2 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .nav-1 .login {
+            margin-left: auto; 
+        }
+
+        .nav-1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-1 a:hover {
+            background-color: gray;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: beige;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: antiquewhite;
+            border-radius: 5px;
+        }
+
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .dropdown_menue ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+
+        .dropdown_menue ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .dropdown_menue ul li a:hover {
+            display: block;
+        }
+
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+
+        .rom {
+            background-color: lightblue;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 30px 0;
+        }
+
+        .rooms {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            justify-content: center; 
+            padding: 20px;
+            background-color: antiquewhite;
+            min-height: 100vh;
+        }
+
+        .room-box {
+            height: 350px; 
+            width: 350px; 
+            background-color: lightgrey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px; 
+        }
+
+        .room-box img {
+            height: 70%;
+            width: 100%; 
+            object-fit: cover;
+            border-bottom: 2px solid #333;
+        }
+
+        .room-box p {
+            font-size: 14px;
+            color: #333;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .room-box:hover {
+            transform: scale(1.05);
+            border-color: #000;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .packages-container,
+            .rooms {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .package-box,
+            .rooms div {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-1">
+        <div class="logo">
+            <h2>Hole Gulf Resort</h2>
+        </div>
+        <div class="login">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="welcome.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="room.html">Rooms</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="fac.html">Facilities</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <section class="rom">Special Room Offerings</section>
+    
+    <div class="rooms">
+        <div class="room-box">
+            <img src="https://i.pinimg.com/474x/ef/ee/50/efee50d3c5e807bafc2af042ea3e3512.jpg" alt="Room 1">
+            <p>Three championship golf courses including the famous Sea View course</p>
+        </div>
+        <div class="room-box">
+            <img src="https://i.pinimg.com/736x/54/1a/5f/541a5f2677643016b93cd8ec841686dd.jpg" alt="Room 2">
+            <p>Two clubhouses</p>
+        </div>
+        <div class="room-box">
+            <img src="https://i.pinimg.com/474x/2e/17/2e/2e172ef5256ee425c1a3d940a33a6ada.jpg" alt="Room 3">
+            <p>Hotel accommodation</p>
+        </div>
+        <div class="room-box">
+            <img src="https://i.pinimg.com/474x/e4/cb/cc/e4cbcccd3cc76ab68adc68f3f592765f.jpg" alt="Room 4">
+            <p>Restaurants and café</p>
+        </div>
+        <div class="room-box">
+            <img src="https://i.pinimg.com/236x/21/49/ab/2149aba3bb352136d5a951eb12dfac4c.jpg" alt="Room 5">
+            <p>Pro shop</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

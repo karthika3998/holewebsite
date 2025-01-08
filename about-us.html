@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+.nav-1 {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 20px; 
+        }
+
+        .logo h2 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .nav-1 .login {
+            margin-left: auto; 
+        }
+
+        .nav-1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-1 a:hover {
+            background-color: gray;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: beige;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+           background-color: antiquewhite;
+            border-radius: 5px;
+        }
+
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .dropdown_menue ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+
+        .dropdown_menue ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .dropdown_menue ul li a:hover {
+            display: block;
+        }
+
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+
+        .about {
+            background-color: beige;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+        .text {
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            width: 90%;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .text-1{
+            background-color: #fff;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin: 20px auto;
+            padding: 20px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            width: 90%;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+
+
+            .navigation a {
+                margin: 10px 0;
+                font-size: 16px;
+            }
+
+            .text {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav-1">
+        <div class="logo">
+            <h2>Hole Gulf Resort</h2>
+        </div>
+        <div class="login">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="welcome.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="room.html">Rooms</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="fac.html">Facilities</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="about">About Us</div>
+
+    <div class="text">
+        Welcome to Hole Golf Resort, where luxury meets the lush greens and breathtaking landscapes of a world-class golfing destination. Nestled in the heart of serene natural beauty, our resort offers an exceptional escape for golf enthusiasts, families, and travelers seeking relaxation, recreation, and unforgettable experiences.
+    </div>
+    <div class="text">
+        At Hole Golf Resort, we take pride in delivering an unparalleled blend of championship-level golfing, premium accommodations, and outstanding hospitality. Our meticulously designed 18-hole golf course, crafted by renowned architects, challenges players of all skill levels while offering stunning panoramic views at every turn.
+    </div>
+    <div class="text">
+        Beyond the fairways, our resort features state-of-the-art facilities, including a luxurious spa, fine dining restaurants offering gourmet cuisine, a fully-equipped fitness center, and event spaces perfect for weddings, corporate retreats, and special celebrations.
+    </div>
+    <div class="text">
+        Our dedicated team is passionate about creating memorable moments for every guest, ensuring a seamless experience from arrival to departure. Whether you're here to perfect your swing, indulge in relaxation, or celebrate a milestone, Hole Golf Resort is your ultimate destination.
+
+
+    </div>
+    <div class="text">
+        Come and discover why Hole Golf Resort is not just a place to stay, but a place to play, unwind, and create memories that last a lifetime.
+        </div>
+        <div class="text-1">
+    Your perfect getaway awaits at Hole Golf Resort.
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+
+
+    <script>
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

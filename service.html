@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-1 {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 0 20px; 
+        }
+
+        .logo h2 {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .nav-1 .login {
+            margin-left: auto; 
+        }
+
+        .nav-1 a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-1 a:hover {
+            background-color: gray;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: beige;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            position: relative;
+        }
+
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav a:hover {
+            background-color: antiquewhite;
+            border-radius: 5px;
+        }
+
+        .dropdown_menue {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .dropdown_menue ul {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .dropdown_menue ul li {
+            padding: 10px;
+            width: 400px;
+        }
+
+        .dropdown_menue ul li a {
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .dropdown_menue ul li a:hover {
+            display: block;
+        }
+
+        .nav li:hover .dropdown_menue {
+            display: block;
+        }
+        .packages {
+            background-color: gainsboro;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .packages-container {
+            display: flex;
+            flex-direction: column; 
+            gap: 20px; 
+            justify-content: flex-start; 
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .package-box {
+            position: relative;
+            height: 300px;
+            width: 100%;
+            
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s, background-color 0.3s;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+           
+            text-align: center; 
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        .package-box img {
+            width: 50%; 
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .package-box .text {
+            padding: 30px;
+            color: black;
+           
+            border-radius: 5px;
+            flex: 1;
+        }
+
+        .package-box h2,
+        .package-box p {
+            margin: 0;
+        }
+
+        .package-box:hover {
+            transform: scale(1.05);
+        }
+
+        .package-box:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .packages-container {
+                flex-direction: column; 
+                gap: 15px;
+            }
+
+            .package-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-1">
+        <div class="logo">
+            <h2>Hole Gulf Resort</h2>
+        </div>
+        <div class="login">
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li><a href="welcome.html">Home</a></li>
+            <li>
+                <a href="#">Services</a>
+                <div class="dropdown_menue">
+                    <ul>
+                        <li><a href="room.html">Rooms</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="fac.html">Facilities</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="packages">Our Packages</section>
+        <div class="packages-container">
+            <div class="package-box">
+                <img src="https://i.pinimg.com/736x/3f/f6/be/3ff6be4c035148b2b57401f962616627.jpg" alt="Floodlit Driving Range">
+                <div class="text">
+                    <h2>Floodlit Driving Range</h2>
+                    <p>9 holes of floodlit golf available until 9 PM weekdays.</p>
+                    <p>High-quality LED floodlights illuminate every corner of the range.</p>
+                    <p>Provides optimal visibility for both golfers and staff, ensuring safety and performance.</p>
+                    <p>Premium range balls for consistent performance.</p>
+                </div>
+            </div>
+            <div class="package-box">
+                <img src="https://static.wixstatic.com/media/83f667_5180ee3399534d62906bbd9fb33932f3~mv2.jpg" alt="Golf Academy">
+                <div class="text">
+                    <h2>Golf Lessons</h2>
+                    <p>1-on-1 private lessons by PGA professionals, 7 days a week.</p>
+                    <p>Learn from experienced PGA-certified instructors.</p>
+                    <p>One-on-one private lessons for focused improvement.</p>
+                    <p>Cutting-edge technology like swing analysis and ball-tracking systems.</p>
+
+                </div>
+            </div>
+            <div class="package-box">
+                <img src="https://golfbusinessnews.com/wp-content/uploads/2024/10/0E7A0757-01-1024x1024.jpg" alt="Digital Coaching">
+                <div class="text">
+                    <h2>Digital Coaching</h2>
+                    <p>Driving range with bar vibes and TrackMan Technology.</p>
+                    <p>Learn and practice from the comfort of your home or local course.</p>
+                    <p>Access coaching anytime, eliminating scheduling challenges.</p>
+                    <p>Customized lessons based on your unique playing style and goals.</p>
+                </div>
+            </div>
+            <div class="package-box">
+                <img src="https://i.pinimg.com/736x/85/ea/7f/85ea7fa4122d93ec2694e369682f512a.jpg" alt="Caddie Services">
+                <div class="text">
+                    <h2>Caddie Service</h2>
+                    <p>Professional caddies to assist during your game.</p>
+                    <p>Caddies help golfers by carrying their golf bag and offering advice on club selection.</p>
+                    <p>in-depth understanding of course layout, terrain, and conditions.</p>
+                    <p>Personalized guidance to improve your game.</p>
+                    <p>Tailored to meet your specific needs and skill level.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
